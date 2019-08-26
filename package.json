@@ -8,7 +8,6 @@
     "docs": "node script/generate-docs",
     "clean": "npx rimraf lib api.json",
     "compile": "npx coffee --no-header --output lib --compile src && npx cpy src/*.js lib/",
-    "install": "npm run compile",
     "lint": "npx coffeelint -r src spec && npx standard src/*.js spec/*.js",
     "test": "node script/test",
     "ci": "npm run compile && npm run lint && npm run test && npm run bench",
